@@ -180,7 +180,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-11-30 18:44:41 / 修改时间：22:27:03" itemprop="dateCreated datePublished" datetime="2024-11-30T18:44:41+08:00">2024-11-30</time>
+              <time title="创建时间：2024-11-30 18:44:41 / 修改时间：23:23:47" itemprop="dateCreated datePublished" datetime="2024-11-30T18:44:41+08:00">2024-11-30</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -213,20 +213,14 @@
 <li><p>Git</p>
 </li>
 </ul>
-<h3 id="Node-js-Node-js-—-在任何地方运行-JavaScript-nodejs-org-部署，建议版本大于-12-0"><a href="#Node-js-Node-js-—-在任何地方运行-JavaScript-nodejs-org-部署，建议版本大于-12-0" class="headerlink" title="[Node.js](Node.js — 在任何地方运行 JavaScript (nodejs.org)) 部署，建议版本大于 12.0"></a>[Node.js](<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn">Node.js — 在任何地方运行 JavaScript (nodejs.org)</a>) 部署，建议版本大于 12.0</h3><p>Node.js 安装中步骤中需要注意其中两处：</p>
+<h3 id="Node-js-部署，建议版本大于-12-0"><a href="#Node-js-部署，建议版本大于-12-0" class="headerlink" title="Node.js 部署，建议版本大于 12.0"></a><a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn">Node.js</a> 部署，建议版本大于 12.0</h3><p>Node.js 安装中步骤中需要注意其中两处：</p>
 <ul>
-<li>Add to PATH 选上，使其集成到系统环境中：</li>
+<li><p>Add to PATH 选上，使其集成到系统环境中：<br><a target="_blank" rel="noopener" href="https://www.picgo.net/image/Snipaste-2024-11-30-19-53-40.WUUD3m"><img src="https://img.picgo.net/2024/11/30/Snipaste_2024-11-30_19-53-404e00ee75eedb365d.md.png" alt="nodejs install1"></a></p>
+</li>
+<li><p>此处勾选会安装各种编程环境和软件，这对于安装hexo是不必要的：<br><a target="_blank" rel="noopener" href="https://www.picgo.net/image/Snipaste-2024-11-30-19-54-33.WUUB9A"><img src="https://img.picgo.net/2024/11/30/Snipaste_2024-11-30_19-54-3360a15eb9c9eff240.md.png" alt="nodejs install2"></a></p>
+</li>
 </ul>
-<img src="file:///D:/myblog/blog/source/picture/个人博客搭建记录/Snipaste_2024-11-30_19-53-40.png" title="" alt="" width="384">
-
-<ul>
-<li>此处勾选会安装各种编程环境和软件，这对于安装hexo是不必要的：</li>
-</ul>
-<img src="file:///D:/myblog/blog/source/picture/个人博客搭建记录/Snipaste_2024-11-30_19-54-33.png" title="" alt="" width="383">
-
-<h3 id="Git-Git-git-scm-com-部署"><a href="#Git-Git-git-scm-com-部署" class="headerlink" title="[Git](Git (git-scm.com)) 部署"></a>[Git](<a target="_blank" rel="noopener" href="https://git-scm.com/">Git (git-scm.com)</a>) 部署</h3><p>所有安装步骤默认即可，若不需要右键菜单，取消如下勾选：</p>
-<img src="file:///D:/myblog/blog/source/picture/个人博客搭建记录/Snipaste_2024-11-30_20-13-14.png" title="" alt="" width="384">
-
+<h3 id="Git-部署"><a href="#Git-部署" class="headerlink" title="Git 部署"></a><a target="_blank" rel="noopener" href="https://git-scm.com/">Git</a> 部署</h3><p>所有安装步骤默认即可，若不需要右键菜单，取消如下勾选：<br><a target="_blank" rel="noopener" href="https://www.picgo.net/image/Snipaste-2024-11-30-20-13-14.WUUfvd"><img src="https://img.picgo.net/2024/11/30/Snipaste_2024-11-30_20-13-149890d3220ddef92d.md.png" alt="git install1"></a></p>
 <h2 id="部署hexo"><a href="#部署hexo" class="headerlink" title="部署hexo"></a>部署hexo</h2><p>打开gitbash，将目录切换至预备安装hexo的文件夹。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 
@@ -242,8 +236,7 @@
 <li><p>在hexo部署文件夹中打开 <code>_config.yml</code>添加以下配置（如果存在请替换）：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:&lt;username&gt;/&lt;project&gt;.git</span></span><br><span class="line">  <span class="comment"># example, hgit@github.com:hexojs/hexojs.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span> <span class="comment"># 此处与github项目分支名相同</span></span><br></pre></td></tr></table></figure>
 
-<p>可以直接从Github项目主页直接复制需要的repo：</p>
-<img src="file:///D:/myblog/blog/source/picture/个人博客搭建记录/Snipaste_2024-11-30_20-49-45.png" title="" alt="" width="627">
+<p>可以直接从Github项目主页直接复制需要的repo：<br><a target="_blank" rel="noopener" href="https://www.picgo.net/image/Snipaste-2024-11-30-20-49-45.WUUZGJ"><img src="https://img.picgo.net/2024/11/30/Snipaste_2024-11-30_20-49-45c7f983f2a921ce82.md.png" alt="gitssh"></a></p>
 </li>
 <li><p>hexo文件夹处使用gitbash，执行以下命令生成本地远程连接github项目的密钥：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;username&quot;</span><br><span class="line">git config --global user.email &quot;user@mail&quot;</span><br><span class="line"></span><br><span class="line">ssh-keygen -t rsa -C &quot;user@mail&quot;</span><br></pre></td></tr></table></figure>
@@ -252,14 +245,11 @@
 <ol>
 <li><p>密钥文件生成后，使用记事本打开并复制id_rsa.pub内容</p>
 </li>
-<li><p>打开github，新建user.github.io项目</p>
-<img src="file:///D:/myblog/blog/source/picture/个人博客搭建记录/Snipaste_2024-11-30_21-08-26.png" title="" alt="" width="536">
+<li><p>打开github，新建user.github.io项目<br><a target="_blank" rel="noopener" href="https://www.picgo.net/image/Snipaste-2024-11-30-21-08-26.WUUueb"><img src="https://img.picgo.net/2024/11/30/Snipaste_2024-11-30_21-08-2616d9b1997df00754.md.png" alt="creat repo"></a></p>
 </li>
-<li><p>进入项目settings</p>
-<img src="file:///D:/myblog/blog/source/picture/个人博客搭建记录/Snipaste_2024-11-30_21-11-56.png" title="" alt="" width="541">
-
-<p>打开如下页面：</p>
-<img src="file:///D:/myblog/blog/source/picture/个人博客搭建记录/Snipaste_2024-11-30_21-17-22.png" title="" alt="" width="546"></li>
+<li><p>进入项目settings<br><a target="_blank" rel="noopener" href="https://www.picgo.net/image/Snipaste-2024-11-30-21-11-56.WUU7gr"><img src="https://img.picgo.net/2024/11/30/Snipaste_2024-11-30_21-11-56c8b199b2018accb5.md.png" alt="entersettings"></a>  </p>
+<p>打开如下页面：<br><a target="_blank" rel="noopener" href="https://www.picgo.net/image/Snipaste-2024-11-30-21-17-22.WUUVbK"><img src="https://img.picgo.net/2024/11/30/Snipaste_2024-11-30_21-17-226e95aea3823994fc.md.png" alt="repo settings"></a></p>
+</li>
 </ol>
 </li>
 <li><p>hexo文件夹中打开gitbash，执行命令</p>
